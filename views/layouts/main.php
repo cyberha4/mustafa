@@ -73,7 +73,7 @@ AppAsset::register($this);
     <div class="container">
     <div id = "main_menu">
     <ul>
-        <li class = 'horiz'><a href="#">Лабораторный материал</a></li>
+        <li class = 'horiz'><a href="#">Лабораторный материал!</a></li>
         <li  class = 'horiz'><a href="#">Лабораторные задания</a></li>
         <li class = 'horiz'><a href="#">Специализированное програмное обеспечение</a></li>
         <li class = 'horiz'><a href="#">Настройка протоколов</a></li>
