@@ -77,7 +77,7 @@ AppAsset::register($this);
         <li  class = 'horiz'><a href="#">Лабораторные задания</a></li>
         <li class = 'horiz'><a href="#">Специализированное програмное обеспечение</a></li>
         <li class = 'horiz'><a href="#">Настройка протоколов</a></li>
-        <?= !Yii::$app->user->isGuest ? '<button href=\'/add\'>Добавить</button>':'' ?>
+        <?= !Yii::$app->user->isGuest ? '<button href="'.Url::toRoute(['site/add', 'category' => 'documents']).'">Добавить док</button>':'' ?>
         <?= !Yii::$app->user->isGuest ? Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton('Выйти') . Html::endForm()
             :'' ?>
@@ -90,8 +90,8 @@ AppAsset::register($this);
     <div class="row">
         <div class="col-md-2 col-sm-3 col-xs-4">
         <ul>
-            <li class = 'vertical'><a href="/index.php?r=site/files&category=commands">Справочник команд</a></li>
-            <li  class = 'vertical'><a href="/index.php?r=site/files&category=documents">Документация</a></li>
+            <li class = 'vertical'><a href="<?= Url::toRoute(['site/files', 'category' => 'documents']) ?>">Справочник команд</a></li>
+            <li  class = 'vertical'><a href="<?= Url::toRoute(['site/files', 'category' => 'commands']) ?>">Документация</a></li>
             <li class = 'vertical'><a href="#">Примеры подключения коммутаторов</a></li>
         </ul>
         </div>
